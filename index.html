@@ -10,21 +10,32 @@
 
 <body>
     <form>
-       
+
+        <!--nome cognome del passeggero-->
+        <label for="nameSurnameInput">Nome e Cognome</label>
+        <input type="text" id="nameSurnameInput" name="nome_cognome_persona"
+            placeholder="Inserisci il tuo Nome e Cognome" required>
+
         <!--età del passeggero-->
         <label for="etaInput">Qual è la tua età?</label>
         <input type="number" id="etaInput" name="eta_persona" placeholder="Inserisci la tua età" required>
-        
+
         <!--distanza da percorrere-->
         <label for="distanzaInput">Inserisci la distanza:</label>
         <input type="number" id="distanzaInput" name="valore_numerico" placeholder="chilomeri da percorrere" required>
         <br>
+
+        <!-- Buttons -->
         <button type="submit" id="btnSubmit">Invia Dati</button>
+        <button type="reset" id="btnReset">Cancella dati</button>
     </form>
-    <p id="resultPrice"></p>
 
+    <!-- Biglietto -->
+    <div id="ticket">
+        <div> Costo biglietto <span id="ticketPrice"></span></div>
+        <div> Nome e Cognome del passeggero <span id="nameSurnameOutput"></span> </div>
+    </div>
 
-    
     <script src="main.js"></script>
 </body>
 
