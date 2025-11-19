@@ -17,27 +17,27 @@
         <h1 class="d-flex justify-content-center bg-danger py-3 text-white rounded-top mb-1">
             Calcola la tariffa del tuo biglietto
         </h1>
-        
+
         <div class=" bg-success p-4 rounded-bottom">
-            
+
             <div class="row">
                 <!--nome cognome del passeggero-->
                 <section class="col-4 mb-3">
-                    <label for="nameSurnameInput">Nome e Cognome</label>
+                    <label for="nameSurnameInput"><i class="fa-solid fa-user"></i>Nome e Cognome</label>
                     <input type="text" class="form-control" id="nameSurnameInput" name="nome_cognome_persona"
-                    placeholder="Mario Rossi" required>
+                        placeholder="Mario Rossi" autocomplete="off" required>
                 </section>
                 <!--età del passeggero-->
                 <section class="col-4 mb-3">
                     <label for="etaInput">Qual è la tua età?</label>
                     <input type="number" class="form-control" id="etaInput" name="eta_persona"
-                    placeholder="Inserisci la tua età" required>
+                        placeholder="Inserisci la tua età" required>
                 </section>
                 <section class="col-4 mb-3">
                     <!--distanza da percorrere-->
-                    <label for="distanzaInput">Inserisci la distanza:</label>
+                    <label for="distanzaInput"><i class="fa-solid fa-train"></i>Inserisci la distanza:</label>
                     <input type="number" class="form-control" id="distanzaInput" name="valore_numerico"
-                    placeholder="Chilometri da percorrere" required>
+                        placeholder="Chilometri da percorrere" required>
                 </section>
             </div>
             <div class="d-flex justify-content-center mt-4">
@@ -45,14 +45,34 @@
                 <button type="submit" id="btnSubmit" class="btn btn-secondary me-3">Invia Dati</button>
                 <button type="reset" id="btnReset" class="btn btn-secondary">Cancella dati</button>
             </div>
-            
+
         </div>
     </div>
 
     <!-- Biglietto -->
-    <div id="ticket">
-        <div> Costo biglietto <span id="ticketPrice"></span></div>
-        <div> Nome e Cognome del passeggero <span id="nameSurnameOutput"></span> </div>
+    <div id="ticket" class="container w-75 mx-auto mt-4 ">
+
+        <div class="card">
+
+            <div class="card-header bg-primary text-white text-center fs-5">
+                <i class="fa-solid fa-ticket"></i> Dettagli del tuo Biglietto
+            </div>
+
+            <div class="card-body">
+
+                <div class="row mb-3">
+                    <div class="col-6 fw-bold"><i class="fa-solid fa-user"></i>Passeggero:</div>
+                    <div class="col-6"><span id="nameSurnameOutput"></span></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 fw-bold"><i class="fa-solid fa-coins"></i>Costo Totale:</div>
+                    <div class="col-6 text-success fw-bold fs-4"><span id="ticketPrice"></span></div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
     <script src="main.js"></script>
